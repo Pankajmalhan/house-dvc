@@ -1,7 +1,7 @@
 base:
   project: house-dev
   random_state: 42
-  target_col: SalePrice
+  target_col: TARGET
 
 data_source:
   s3_source: data_given/data.csv
@@ -15,17 +15,15 @@ split_data:
   test_size: 0.2
 
 estimators:
-  DecisionTreeRegressor:
+  ElasticNet:
     params:
-      max_depth: 10
-      min_samples_leaf: 2
-      max_features: log2
-      max_leaf_nodes: 20
+      alpha: 0.678
+      l1_ratio: 0.43
       
 model_dir: saved_models
 
 reports:
-  params: report/params.json
-  scores: report/scores.json
+  params: reports/params.json
+  scores: reports/scores.json
 
 webapp_model_dir: prediction_service/model/model.joblib
