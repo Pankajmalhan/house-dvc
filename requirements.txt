@@ -9,4 +9,4 @@ tox
 flake8
 flask
 gunicorn
-django
+django  
