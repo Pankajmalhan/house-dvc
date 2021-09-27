@@ -1,4 +1,4 @@
 {
-    "alpha": 0.4,
-    "l1_ratio": 0.12345
+    "max_depth": 20,
+    "min_samples_split": 2
 }

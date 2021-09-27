@@ -24,8 +24,8 @@ stages:
     - data/processed/test.csv 
     - src/train_and_evaluate.py
     params:
-    - estimators.ElasticNet.params.alpha
-    - estimators.ElasticNet.params.l1_ratio
+    - estimators.DecisionTreeRegressor.params.max_depth
+    - estimators.DecisionTreeRegressor.params.min_samples_split
     metrics:
     - reports/scores.json:
         cache: false
